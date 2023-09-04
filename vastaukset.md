@@ -44,25 +44,25 @@ SELECT nimi FROM Elokuvat WHERE vuosi<1950 OR vuosi>1980;
 ### Tehtävä 7
 
 ```SQL
-
+SELECT nimi FROM Elokuvat WHERE vuosi!=1940;
 ```
 
-### Tehtävä 3
+### Tehtävä 8
 
 ```SQL
-
+SELECT nimi FROM Elokuvat ORDER BY nimi;
 ```
 
-### Tehtävä 3
+### Tehtävä 9
 
 ```SQL
-
+SELECT nimi FROM Elokuvat ORDER BY nimi DESC;
 ```
 
-### Tehtävä 3
+### Tehtävä 10
 
 ```SQL
-
+SELECT nimi,vuosi FROM Elokuvat ORDER BY vuosi DESC, nimi;
 ```
 
 ### Tehtävä 3
