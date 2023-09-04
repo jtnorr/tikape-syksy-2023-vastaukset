@@ -3,7 +3,7 @@
 ## Sisällysluettelo
 
 1. [Tehtävä 1](#tehtävä-1)
-2. [Tehtävä 2]()
+2. [Tehtävä 2](#tehtävä-2)
 
 ### Tehtävä 1
 
