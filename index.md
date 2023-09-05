@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+permalink: /home/
 ---
 
 
@@ -10,4 +11,4 @@ Vastaukset [Avoin yo: Tietokantojen perusteet, Verkko-opetus 5 op Syksy 2023](ht
 
 Tämä repositorio sisältää jtnorr mallivastaukset tehtäviin.
 
-Vastaukset löytyvät [täältä](/vastaukset.md).
+Vastaukset löytyvät [täältä](/vastaukset/).

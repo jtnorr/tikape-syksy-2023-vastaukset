@@ -1,14 +1,10 @@
 ---
 layout: default
 title: Vastaukset tikape syksy 2023
+permalink: /vastaukset/
 ---
 
-# Vastaukset
-
-## Sisällysluettelo
-
-1. [Tehtävä 1](#tehtävä-1)
-2. [Tehtävä 2](#tehtävä-2)
+## Vastaukset
 
 ### Tehtävä 1
 
