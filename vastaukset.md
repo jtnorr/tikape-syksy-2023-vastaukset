@@ -125,7 +125,7 @@ SELECT yritys, MAX(palkka) FROM Tyontekijat GROUP BY yritys;
 ### Tehtävä 20
 
 ```SQL
-
+SELECT yritys, MAX(palkka) FROM Tyontekijat WHERE palkka>=5000 GROUP BY yritys;
 ```
 
 ### Tehtävä 16
