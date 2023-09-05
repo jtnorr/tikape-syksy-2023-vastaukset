@@ -128,55 +128,102 @@ SELECT yritys, MAX(palkka) FROM Tyontekijat GROUP BY yritys;
 SELECT yritys, MAX(palkka) FROM Tyontekijat WHERE palkka>=5000 GROUP BY yritys;
 ```
 
-### Tehtävä 16
+### Tehtävä 21
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ Pelaajat.nimi, Tulokset.tulos
+FROM
+ Pelaajat,Tulokset
+WHERE
+ Pelaajat.id = Tulokset.pelaaja_id;
 ```
 
-### Tehtävä 16
+### Tehtävä 22
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ Pelaajat.nimi, Tulokset.tulos
+FROM
+ Pelaajat, Tulokset
+WHERE
+ Pelaajat.id = Tulokset.pelaaja_id AND Pelaajat.nimi = "Uolevi";
 ```
 
-### Tehtävä 16
+### Tehtävä 23
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ P.nimi, T.tulos
+FROM
+ Pelaajat AS P, Tulokset AS T
+WHERE
+ P.id = T.pelaaja_id AND T.tulos>250;
+
 ```
 
-### Tehtävä 16
+### Tehtävä 24
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ P.nimi, T.tulos
+FROM
+ Pelaajat P, Tulokset T
+WHERE
+ P.id = T.pelaaja_id
+ORDER BY
+ T.tulos DESC, P.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 25
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ P.nimi, MAX(T.tulos)
+FROM
+ Pelaajat P, Tulokset T
+WHERE
+ P.id = T.pelaaja_id
+GROUP BY
+ P.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 26
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ P.nimi, COUNT(T.tulos)
+FROM
+ Pelaajat P, Tulokset T
+WHERE
+ P.id = T.pelaaja_id
+GROUP BY
+ P.nimi
 ```
 
-### Tehtävä 16
+### Tehtävä 27
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, K.nimi, S.arvosana
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id;
 ```
 
-### Tehtävä 16
+### Tehtävä 28
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ K.nimi, S.arvosana
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id AND O.nimi = 'Uolevi';
 ```
 
-### Tehtävä 16
+### Tehtävä 29
 
 ```SQL
 SELECT MAX(palkka) FROM Tyontekijat;
