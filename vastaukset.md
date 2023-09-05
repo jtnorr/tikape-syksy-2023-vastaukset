@@ -1,8 +1,11 @@
+---
+layout: default
+title: Vastaukset tikape syksy 2023
+---
+
 # Vastaukset
 
 ## Sisällysluettelo
-
-{% include toc.html html=content sanitize=true class="inline_toc" id="my_toc" h_min=1 h_max=6 %}
 
 1. [Tehtävä 1](#tehtävä-1)
 2. [Tehtävä 2](#tehtävä-2)
