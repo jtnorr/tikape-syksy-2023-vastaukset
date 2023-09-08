@@ -8,7 +8,7 @@ layout: post
 
 ### Tehtävä 1
 
-```SQL
+```sql
 SELECT nimi FROM Elokuvat
 ```
 
