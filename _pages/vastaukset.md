@@ -319,7 +319,7 @@ GROUP BY
 
 ### Tehtävä 37
 
-```SQL
+{% highlight SQL %}
 SELECT
  K.nimi, COUNT(S.kurssi_id)
 FROM
@@ -328,7 +328,7 @@ LEFT JOIN
  Suoritukset S ON K.id = S.kurssi_id
 GROUP BY
  K.id;
-```
+{% endhighlight %}
 
 ### Tehtävä 38
 
