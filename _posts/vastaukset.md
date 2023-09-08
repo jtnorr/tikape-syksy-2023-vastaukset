@@ -224,61 +224,116 @@ WHERE
 ### Tehtävä 29
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, S.arvosana
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id AND K.id = 1;
 ```
 
-### Tehtävä 16
+### Tehtävä 30
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, K.nimi, S.arvosana
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id AND S.arvosana >= 4;
 ```
 
-### Tehtävä 16
+### Tehtävä 31
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, COUNT(S.opiskelija_id)
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id
+GROUP BY
+ O.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 32
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, MAX(S.arvosana)
+FROM
+ Opiskelijat O, Kurssit K, Suoritukset S
+WHERE
+ O.id = S.opiskelija_id AND K.id = S.kurssi_id
+GROUP BY
+ O.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 33
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ A.nimi, B.nimi
+FROM
+ Kaupungit A, Kaupungit B, Lennot L
+WHERE
+ A.id = L.mista_id AND B.id = L.minne_id;
 ```
 
-### Tehtävä 16
+### Tehtävä 34
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ K.nimi
+FROM
+ Kaupungit K, Lennot L
+WHERE
+K.id = L.minne_id AND L.mista_id = 1;
 ```
 
-### Tehtävä 16
+### Tehtävä 35
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+    P.nimi, COUNT(T.pelaaja_id)
+FROM
+    Pelaajat P
+LEFT JOIN
+    Tulokset T ON P.id = T.pelaaja_id
+GROUP BY
+    P.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 36
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ O.nimi, COUNT(S.opiskelija_id)
+FROM
+ Opiskelijat O
+LEFT JOIN
+ Suoritukset S ON O.id = S.opiskelija_id
+GROUP BY
+ O.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 37
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ K.nimi, COUNT(S.kurssi_id)
+FROM
+ Kurssit K
+LEFT JOIN
+ Suoritukset S ON K.id = S.kurssi_id
+GROUP BY
+ K.id;
 ```
 
-### Tehtävä 16
+### Tehtävä 38
 
 ```SQL
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
