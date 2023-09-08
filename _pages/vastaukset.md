@@ -20,7 +20,7 @@ SELECT nimi,vuosi FROM Elokuvat
 
 ### Tehtävä 3
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat WHERE vuosi=1940;
 ```
 
@@ -68,7 +68,7 @@ SELECT nimi,vuosi FROM Elokuvat ORDER BY vuosi DESC, nimi;
 
 ### Tehtävä 11
 
-```SQL
+``` sql
 SELECT DISTINCT etunimi FROM Nimet;
 ```
 
