@@ -8,13 +8,13 @@ layout: post
 
 ### Tehtävä 1
 
-```sql
+``` sql
 SELECT nimi FROM Elokuvat
 ```
 
 ### Tehtävä 2
 
-```SQL
+``` SQL
 SELECT nimi,vuosi FROM Elokuvat
 ```
 
