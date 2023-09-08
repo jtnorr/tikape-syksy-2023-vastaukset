@@ -6,8 +6,6 @@ category: tikape
 layout: post
 ---
 
-## Vastaukset
-
 ### Tehtävä 1
 
 ```SQL
