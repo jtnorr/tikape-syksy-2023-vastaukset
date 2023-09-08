@@ -8,127 +8,127 @@ layout: post
 
 ### Tehtävä 1
 
-``` sql
+```  sql
 SELECT nimi FROM Elokuvat
 ```
 
 ### Tehtävä 2
 
-``` SQL
+```  sql
 SELECT nimi,vuosi FROM Elokuvat
 ```
 
 ### Tehtävä 3
 
-``` sql
+```  sql
 SELECT nimi FROM Elokuvat WHERE vuosi=1940;
 ```
 
 ### Tehtävä 4
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat WHERE vuosi<1950;
 ```
 
 ### Tehtävä 5
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat WHERE vuosi>=1940 AND vuosi<=1950;
 ```
 
 ### Tehtävä 6
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat WHERE vuosi<1950 OR vuosi>1980;
 ```
 
 ### Tehtävä 7
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat WHERE vuosi!=1940;
 ```
 
 ### Tehtävä 8
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat ORDER BY nimi;
 ```
 
 ### Tehtävä 9
 
-```SQL
+``` sql
 SELECT nimi FROM Elokuvat ORDER BY nimi DESC;
 ```
 
 ### Tehtävä 10
 
-```SQL
+``` sql
 SELECT nimi,vuosi FROM Elokuvat ORDER BY vuosi DESC, nimi;
 ```
 
 ### Tehtävä 11
 
-``` sql
+```  sql
 SELECT DISTINCT etunimi FROM Nimet;
 ```
 
 ### Tehtävä 12
 
-```SQL
+``` sql
 SELECT DISTINCT etunimi,sukunimi FROM Nimet;
 ```
 
 ### Tehtävä 13
 
-```SQL
+``` sql
 SELECT COUNT(*) FROM Tyontekijat;
 ```
 
 ### Tehtävä 14
 
-```SQL
+``` sql
 SELECT COUNT(*) FROM Tyontekijat WHERE palkka>2000;
 ```
 
 ### Tehtävä 15
 
-```SQL
+``` sql
 SELECT SUM(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 17
 
-```SQL
+``` sql
 SELECT COUNT(DISTINCT yritys) FROM Tyontekijat;
 ```
 
 ### Tehtävä 18
 
-```SQL
+``` sql
 SELECT yritys, COUNT(*) FROM Tyontekijat GROUP BY yritys;
 ```
 
 ### Tehtävä 19
 
-```SQL
+``` sql
 SELECT yritys, MAX(palkka) FROM Tyontekijat GROUP BY yritys;
 ```
 
 ### Tehtävä 20
 
-```SQL
+``` sql
 SELECT yritys, MAX(palkka) FROM Tyontekijat WHERE palkka>=5000 GROUP BY yritys;
 ```
 
 ### Tehtävä 21
 
-```SQL
+``` sql
 SELECT
  Pelaajat.nimi, Tulokset.tulos
 FROM
@@ -139,7 +139,7 @@ WHERE
 
 ### Tehtävä 22
 
-```SQL
+``` sql
 SELECT
  Pelaajat.nimi, Tulokset.tulos
 FROM
@@ -150,7 +150,7 @@ WHERE
 
 ### Tehtävä 23
 
-```SQL
+``` sql
 SELECT
  P.nimi, T.tulos
 FROM
@@ -162,7 +162,7 @@ WHERE
 
 ### Tehtävä 24
 
-```SQL
+``` sql
 SELECT
  P.nimi, T.tulos
 FROM
@@ -175,7 +175,7 @@ ORDER BY
 
 ### Tehtävä 25
 
-```SQL
+``` sql
 SELECT
  P.nimi, MAX(T.tulos)
 FROM
@@ -188,7 +188,7 @@ GROUP BY
 
 ### Tehtävä 26
 
-```SQL
+``` sql
 SELECT
  P.nimi, COUNT(T.tulos)
 FROM
@@ -201,7 +201,7 @@ GROUP BY
 
 ### Tehtävä 27
 
-```SQL
+``` sql
 SELECT
  O.nimi, K.nimi, S.arvosana
 FROM
@@ -212,7 +212,7 @@ WHERE
 
 ### Tehtävä 28
 
-```SQL
+``` sql
 SELECT
  K.nimi, S.arvosana
 FROM
@@ -223,7 +223,7 @@ WHERE
 
 ### Tehtävä 29
 
-```SQL
+``` sql
 SELECT
  O.nimi, S.arvosana
 FROM
@@ -234,7 +234,7 @@ WHERE
 
 ### Tehtävä 30
 
-```SQL
+``` sql
 SELECT
  O.nimi, K.nimi, S.arvosana
 FROM
@@ -245,7 +245,7 @@ WHERE
 
 ### Tehtävä 31
 
-```SQL
+``` sql
 SELECT
  O.nimi, COUNT(S.opiskelija_id)
 FROM
@@ -258,7 +258,7 @@ GROUP BY
 
 ### Tehtävä 32
 
-```SQL
+``` sql
 SELECT
  O.nimi, MAX(S.arvosana)
 FROM
@@ -271,7 +271,7 @@ GROUP BY
 
 ### Tehtävä 33
 
-```SQL
+``` sql
 SELECT
  A.nimi, B.nimi
 FROM
@@ -282,7 +282,7 @@ WHERE
 
 ### Tehtävä 34
 
-```SQL
+``` sql
 SELECT
  K.nimi
 FROM
@@ -293,7 +293,7 @@ K.id = L.minne_id AND L.mista_id = 1;
 
 ### Tehtävä 35
 
-```SQL
+``` sql
 SELECT
     P.nimi, COUNT(T.pelaaja_id)
 FROM
@@ -306,7 +306,7 @@ GROUP BY
 
 ### Tehtävä 36
 
-```SQL
+``` sql
 SELECT
  O.nimi, COUNT(S.opiskelija_id)
 FROM
@@ -319,7 +319,7 @@ GROUP BY
 
 ### Tehtävä 37
 
-```SQL
+``` sql
 SELECT
  K.nimi, COUNT(S.kurssi_id)
 FROM
@@ -332,276 +332,276 @@ GROUP BY
 
 ### Tehtävä 38
 
-```SQL
+```  sql
 
 ```
 
 ### Tehtävä 16
 
-```SQL
+```  sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
 
 ### Tehtävä 16
 
-```SQL
+``` sql
 SELECT MAX(palkka) FROM Tyontekijat;
 ```
