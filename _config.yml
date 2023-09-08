@@ -6,14 +6,10 @@ plugins:
   - jemoji
   - jekyll-remote-theme
 
-syntax_highlighter_style: colorful
-
 toc:
     enabled: true
     h_min: 1
     h_max: 3
-
-markdown: kramdown
 
 markdown:         kramdown
 kramdown:
@@ -26,7 +22,7 @@ kramdown:
   syntax_highlighter_opts:
     guess_lang:           true
 
-syntax_highlighter_style: thankful_eyes
+syntax_highlighter_style: colourful
 
 markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
