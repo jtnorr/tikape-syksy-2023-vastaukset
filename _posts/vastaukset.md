@@ -1,7 +1,9 @@
 ---
-layout: default
-title: Vastaukset tikape syksy 2023
-permalink: /vastaukset/
+title: Vastaukset
+author: jtnorr
+date: 2023-09-08
+category: tikape
+layout: post
 ---
 
 ## Vastaukset
