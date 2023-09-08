@@ -333,19 +333,40 @@ GROUP BY
 ### Tehtävä 38
 
 ```  sql
-
+SELECT
+ K.nimi
+FROM
+ Kurssit K, Suoritukset S
+WHERE
+ K.id = S.kurssi_id
+GROUP BY
+ K.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 39
 
 ```  sql
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ K.nimi
+FROM
+ Kurssit K
+LEFT JOIN
+ Suoritukset S ON S.kurssi_id = K.id
+WHERE
+ S.kurssi_id IS NULL;
 ```
 
-### Tehtävä 16
+### Tehtävä 40
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+  K.nimi, COUNT(L.mista_id)
+FROM
+  Kaupungit K
+LEFT JOIN
+  Lennot L ON K.id = L.mista_id
+GROUP BY
+  K.nimi;
 ```
 
 ### Tehtävä 16
