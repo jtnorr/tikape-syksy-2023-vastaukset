@@ -369,260 +369,303 @@ GROUP BY
   K.nimi;
 ```
 
-### Tehtävä 16
+### Tehtävä 41
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+SELECT
+ nimi, hinta * 2
+FROM
+ Tuotteet;
+```
+
+### Tehtävä 42
+
+``` sql
+SELECT
+ nimi, hinta
+FROM
+ Tuotteet
+WHERE
+ hinta % 2 = 0;
+```
+
+### Tehtävä 43
+
+``` sql
+SELECT
+ sana, LENGTH(sana)
+FROM
+ Sanat;
+```
+
+### Tehtävä 44
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+WHERE
+ LENGTH(sana) < 6;
+```
+
+### Tehtävä 45
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+ORDER BY
+ LENGTH(sana), sana;
+```
+
+### Tehtävä 46
+
+``` sql
+SELECT
+ etunimi || ' ' || sukunimi
+FROM
+ Kayttajat;
+```
+
+### Tehtävä 47
+
+``` sql
+SELECT
+ SUM(LENGTH(sana))
+FROM
+ Sanat;
+```
+
+### Tehtävä 48
+
+``` sql
+SELECT
+ tuote, hinta*maara
+FROM
+ Tilaukset;
+```
+
+### Tehtävä 49
+
+``` sql
+SELECT
+ SUM(hinta*maara)
+FROM
+ Tilaukset;
+```
+
+### Tehtävä 50
+
+``` sql
+SELECT
+ nimi
+FROM
+ Elokuvat
+WHERE
+ (vuosi % 4 = 0 AND vuosi % 100 != 0) OR vuosi % 400 = 0;
+```
+
+### Tehtävä 51
+
+``` sql
+SELECT
+ nimi
+FROM
+ Tuotteet
+WHERE
+ hinta = (SELECT MIN(hinta) FROM Tuotteet);
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
+
 ```
 
 ### Tehtävä 16
 
 ``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
 
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
-```
-
-### Tehtävä 16
-
-``` sql
-SELECT MAX(palkka) FROM Tyontekijat;
 ```
