@@ -10,4 +10,7 @@ Tämä repositorio sisältää jtnorr mallivastaukset tehtäviin.
 
 Vastaukset löytyvät [täältä][1].
 
+Sivuston teemana toimii [GitBook-teema][2]
+
 [1]: https://jtnorr.github.io/tikape-syksy-2023-vastaukset/pages/vastaukset/
+[2]: https://sighingnow.github.io/jekyll-gitbook/
