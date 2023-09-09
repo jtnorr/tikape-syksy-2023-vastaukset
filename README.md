@@ -8,4 +8,6 @@ Vastaukset [Avoin yo: Tietokantojen perusteet, Verkko-opetus 5 op Syksy 2023](ht
 
 Tämä repositorio sisältää jtnorr mallivastaukset tehtäviin.
 
-Vastaukset löytyvät [täältä](/_pages/vastaukset/).
+Vastaukset löytyvät [täältä][1].
+
+[1]: https://jtnorr.github.io/tikape-syksy-2023-vastaukset/pages/vastaukset/
