@@ -37,3 +37,5 @@ collections:
 destination:      ./_site
 incremental:      false
 regenerate:       true
+
+favicon_path:     /assets/gitbook/images/favicon.ico
