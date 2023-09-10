@@ -478,193 +478,365 @@ WHERE
  hinta = (SELECT MIN(hinta) FROM Tuotteet);
 ```
 
-### Tehtävä 16
+### Tehtävä 52
+
+``` sql
+SELECT
+ nimi
+FROM
+ Tuotteet
+WHERE
+ hinta <= (SELECT MIN(hinta) * 2 FROM Tuotteet);
+```
+
+### Tehtävä 53
+
+``` sql
+SELECT
+ nimi
+FROM
+ Tuotteet
+GROUP BY
+ hinta
+HAVING
+ COUNT(hinta) = 1;
+```
+
+### Tehtävä 54
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+ORDER BY
+ sana
+LIMIT
+ 1;
+```
+
+**TAI**
+
+``` sql
+SELECT MIN(sana) FROM Sanat;
+```
+
+### Tehtävä 55
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+ORDER BY
+ sana
+LIMIT
+ 1
+OFFSET
+ 1
+```
+
+### Tehtävä 56
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+ORDER BY
+ sana ASC
+LIMIT 100000000 OFFSET 1; -- teoreettisesti riittävän iso numero, voidaan myös kasvattaa tarvittaessa
+```
+
+**TAI**
+
+``` sql
+SELECT sana
+FROM Sanat
+ORDER BY sana
+LIMIT (SELECT COUNT(*) - 1 FROM Sanat)
+OFFSET 1;
+```
+
+### Tehtävä 57
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+WHERE
+ sana LIKE '%i%';
+```
+
+### Tehtävä 58
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+WHERE
+ sana LIKE 'a%';
+```
+
+### Tehtävä 59
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+WHERE
+ LENGTH(sana) = 5 AND sana LIKE '_p%';
+```
+
+### Tehtävä 60
+
+``` sql
+SELECT
+ sana
+FROM
+ Sanat
+WHERE
+ sana LIKE '%a%a%' AND sana NOT LIKE '%a%a%a%';
+```
+
+### Tehtävä 61
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 62
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 63
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 64
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 65
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 66
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 67
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 68
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 69
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 70
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 71
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 72
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 73
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 74
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 75
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 76
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 77
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 78
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 79
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 80
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 81
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 82
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 83
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 84
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 85
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 86
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 87
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 88
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 89
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 90
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 91
 
 ``` sql
 
 ```
 
-### Tehtävä 16
+### Tehtävä 92
+
+``` sql
+
+```
+
+### Tehtävä 93
+
+``` sql
+
+```
+
+### Tehtävä 94
+
+``` sql
+
+```
+
+### Tehtävä 95
+
+``` sql
+
+```
+
+### Tehtävä 96
+
+``` sql
+
+```
+
+### Tehtävä 97
+
+``` sql
+
+```
+
+### Tehtävä 98
+
+``` sql
+
+```
+
+### Tehtävä 99
+
+``` sql
+
+```
+
+### Tehtävä 100
 
 ``` sql
 
