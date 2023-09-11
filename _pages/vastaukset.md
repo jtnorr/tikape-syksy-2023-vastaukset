@@ -605,19 +605,37 @@ WHERE
 ### Tehtävä 61
 
 ``` sql
-
+SELECT
+ K.tunnus, COUNT(O.kayttaja_id)
+FROM
+ Kayttajat K
+LEFT JOIN
+ Oikeudet O ON K.id = O.kayttaja_id
+GROUP BY
+ K.tunnus
 ```
 
 ### Tehtävä 62
 
 ``` sql
-
+SELECT
+ R.nimi, COUNT(O.ryhma_id)
+FROM
+ Ryhmat R
+LEFT JOIN
+ Oikeudet O ON R.id = O.ryhma_id
+GROUP BY
+ R.id;
 ```
 
 ### Tehtävä 63
 
 ``` sql
-
+SELECT K.tunnus
+FROM Kayttajat K
+INNER JOIN Oikeudet ON K.id = Oikeudet.kayttaja_id
+GROUP BY K.tunnus
+HAVING COUNT(K.id) > 1;
 ```
 
 ### Tehtävä 64
