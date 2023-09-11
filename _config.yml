@@ -26,6 +26,8 @@ syntax_highlighter_style: molokai
 
 markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
+permalink:                /:categories/:year-:month-:day-:title:output_ext
+
 
 collections:
   pages:
