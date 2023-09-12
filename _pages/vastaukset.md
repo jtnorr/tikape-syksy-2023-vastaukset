@@ -641,54 +641,128 @@ HAVING COUNT(K.id) > 1;
 ### Tehtävä 64
 
 ``` sql
-
+SELECT DISTINCT K.tunnus
+FROM Kayttajat K
+JOIN Oikeudet O1 ON K.id = O1.kayttaja_id
+JOIN Oikeudet O2 ON O1.ryhma_id = O2.ryhma_id
+WHERE O2.kayttaja_id = 1;
 ```
 
 ### Tehtävä 65
 
 ``` sql
-
+SELECT K.tunnus
+FROM Kayttajat K
+WHERE K.tunnus != 'uolevi'
+AND K.id NOT IN (
+    SELECT O1.kayttaja_id
+    FROM Oikeudet O1
+    INNER JOIN Kayttajat K1 ON O1.kayttaja_id = K1.id
+    INNER JOIN Oikeudet O2 ON O1.ryhma_id = O2.ryhma_id
+    INNER JOIN Kayttajat K2 ON O2.kayttaja_id = K2.id
+    WHERE K2.tunnus = 'uolevi'
+);
 ```
 
 ### Tehtävä 66
 
 ``` sql
+SELECT S.sana
+FROM Sanat S
+ORDER BY sana COLLATE NOCASE;
+```
 
+**TAI**
+
+``` sql
+SELECT S.sana
+FROM Sanat S
+ORDER BY sana LOWER(sana);
 ```
 
 ### Tehtävä 67
 
 ``` sql
+SELECT nimi, hinta
+FROM Tuotteet
+WHERE hinta = (SELECT MIN(hinta) FROM Tuotteet ORDER BY nimi)
+ORDER BY nimi
+LIMIT 1
+```
 
+**TAI**
+
+``` sql
+SELECT nimi,
+    hinta
+FROM Tuotteet
+ORDER BY hinta,
+    nimi
+LIMIT 1;
 ```
 
 ### Tehtävä 68
 
 ``` sql
+SELECT a.nimi AS name, COUNT(b.id) AS tuotteet_1_hintayksikon_erolla
+FROM tuotteet AS a
+LEFT JOIN tuotteet AS b
+ON ABS(a.hinta - b.hinta) <= 1
+GROUP BY a.id, a.nimi
+ORDER BY a.id;
+```
 
+**TAI**
+
+``` sql
+SELECT A.nimi, COUNT(*)
+FROM Tuotteet A, Tuotteet B
+WHERE ABS(A.hinta-B.hinta) <= 1
+GROUP BY A.id;
 ```
 
 ### Tehtävä 69
 
 ``` sql
-
+SELECT COUNT(*)
+FROM Tuotteet A, Tuotteet B
+WHERE A.hinta + B.hinta = 10 AND A.id <= B.id;
 ```
 
 ### Tehtävä 70
 
 ``` sql
-
+SELECT MIN(A.hinta - B.hinta)
+FROM Tuotteet A, Tuotteet B
+WHERE A.id != B.id AND A.hinta > B.hinta
 ```
 
 ### Tehtävä 71
 
 ``` sql
-
+SELECT t.haltija, COALESCE(SUM(muutos), 0) AS balance
+FROM Tilit t
+LEFT JOIN Tapahtumat ta ON t.id = ta.tili_id
+GROUP BY t.haltija;
 ```
 
 ### Tehtävä 72
 
 ``` sql
+SELECT
+    SUM(ta2.muutos) AS balance
+FROM
+    Tilit t
+JOIN
+    Tapahtumat ta ON t.id = ta.tili_id
+JOIN
+    Tapahtumat ta2 ON ta.tili_id = ta2.tili_id AND ta.id >= ta2.id
+WHERE
+    t.haltija = 'Uolevi'
+GROUP BY
+    ta.id, t.haltija
+ORDER BY
+    ta.id;
 
 ```
 
